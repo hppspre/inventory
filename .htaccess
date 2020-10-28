@@ -1,0 +1,9 @@
+RewriteEngine On
+ErrorDocument 404 /inventory/404.php
+
+
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
